@@ -9,15 +9,39 @@ def randomDoor(initialDoorSet):
     RandDoor = doorList.pop(0)
     return RandDoor
 
-def openUnchosedDoorWithNocar(initialDoorSet,putCarIn,chooseDoor); 
+def openUnchosedDoorWithNocar(initialDoorSet,putCarIn,chooseDoor):
     doorset = initialDoorSet - (putCarIn | chooseDoor)
     doorList = list(doorset)
     random.shuffle(doorList)
     RandDoor = doorList.pop(0)
     return RandDoor
 
+def MontiHallExperiment66():
 
-######
+    initialDoorSet = {'X','Y','Z'}
+    print("there are 3 doors", initialDoorSet)
+
+    putCarIn = randomDoor(initialDoorSet)
+    chooseDoor = randomDoor(initialDoorSet)
+    print("Out of them we choose door ", chooseDoor)
+
+    openDoor = openUnchosedDoorWithNocar(initialDoorSe=initialDoorSet,putCarIn=set(putCarIn),chooseDoor=set(chooseDoor))
+    print("The host then opens the door " ,openDoor," which was empty.")
+    print("The host then offers us as choice to changes our initial answer\nWe decided to change our choice")
+    
+    openDoor = initialDoorSet - chooseDoor - openDoor
+    print("Now, we choose to open door ",openDoor)
+    # check if sets check if open door and are same
+
+    if(openDoor == chooseDoor ):
+        print("CONGRATULATION!! YOU WON A CAR")
+        return True
+    else:
+        print("sorry you didn't win")
+        return False
+
+
+# need to write for option a 
 
 totalNumberOfExperment = 1000
 sucessfullExperment = [0]*2
