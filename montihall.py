@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def randomDoor(initialDoorSet):
     doorList = list(initialDoorSet)
-    print(type(doorList),doorList)
+    #print(type(doorList),doorList)
     random.shuffle(doorList)
     RandDoor = doorList.pop(0)
     return RandDoor
@@ -72,7 +72,7 @@ def MontiHallExperiment33():
 
 totalNumberOfExperment = 1000
 sucessfullExperment = [0]*2
-xlabel= ["Success from option A", "Success from option B"]
+xlabel= ["Option A", "Option B"]
 
 #for option A to not to change options
 experimentNum = 0
@@ -108,3 +108,9 @@ while(experimentNum < totalNumberOfExperment):
 
 plt.figure(figsize=(10,6))
 plt.bar(x=xlabel,y=sucessfullExperment,width= 20,lable = "successfull predictions")
+plt.title("Monti Hall problem",loc="center")
+plt.xlabel("Methods used",loc="center")
+plt.ylabel("Number of successfull experiment")
+plt.legend()
+plt.grid()
+plt.show()
