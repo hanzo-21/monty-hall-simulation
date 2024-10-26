@@ -1,0 +1,7 @@
+after simulating it 10000 of times 
+we can see that sucess rate for option A is 50%
+where as the sucess rate for ooption B is 66%
+
+So it is remomened to change your choice.
+
+assuming that the game is truly random 

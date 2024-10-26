@@ -1,0 +1,93 @@
+
+Conducting  5  experiments for optioin A
+=====================================================
+Experiment number  1
+Monti: There are 3 doors {'Z', 'Y', 'X'} One of Them hsa a car behind it. but which one?
+Sterling: I choose door  {'Y'}
+Monti: Well well, I'll open the door {'X'} and lucky you, this is empty.
+Monti: So I ask you now. will you change your answer?
+Sterling: It's 50 - 50 so I choose  {'Z'}
+CONGRATULATION!! YOU WON A CAR
+=====================================================
+=====================================================
+Experiment number  2
+Monti: There are 3 doors {'Z', 'Y', 'X'} One of Them hsa a car behind it. but which one?
+Sterling: I choose door  {'X'}
+Monti: Well well, I'll open the door {'Y'} and lucky you, this is empty.
+Monti: So I ask you now. will you change your answer?
+Sterling: It's 50 - 50 so I choose  {'X'}
+sorry you didn't win
+=====================================================
+=====================================================
+Experiment number  3
+Monti: There are 3 doors {'Z', 'Y', 'X'} One of Them hsa a car behind it. but which one?
+Sterling: I choose door  {'Y'}
+Monti: Well well, I'll open the door {'Z'} and lucky you, this is empty.
+Monti: So I ask you now. will you change your answer?
+Sterling: It's 50 - 50 so I choose  {'Y'}
+sorry you didn't win
+=====================================================
+=====================================================
+Experiment number  4
+Monti: There are 3 doors {'Z', 'Y', 'X'} One of Them hsa a car behind it. but which one?
+Sterling: I choose door  {'Z'}
+Monti: Well well, I'll open the door {'Y'} and lucky you, this is empty.
+Monti: So I ask you now. will you change your answer?
+Sterling: It's 50 - 50 so I choose  {'Z'}
+CONGRATULATION!! YOU WON A CAR
+=====================================================
+=====================================================
+Experiment number  5
+Monti: There are 3 doors {'Z', 'Y', 'X'} One of Them hsa a car behind it. but which one?
+Sterling: I choose door  {'Y'}
+Monti: Well well, I'll open the door {'Z'} and lucky you, this is empty.
+Monti: So I ask you now. will you change your answer?
+Sterling: It's 50 - 50 so I choose  {'Y'}
+CONGRATULATION!! YOU WON A CAR
+=====================================================
+Conducting  5  experiments for optioin A
+=====================================================
+Experiment number  1
+Monti: There are 3 doors {'Z', 'Y', 'X'} One of Them hsa a car behind it. but which one?
+Sterling: I choose door  {'Y'}
+Monti: Well well, I'll open the door {'Z'} and lucky you, this is empty.
+Monti: So I ask you now. will you change your answer?
+Sterling: I'm gonna do what's called a pro gamer move and choose door  {'X'}
+sorry you didn't win
+=====================================================
+=====================================================
+Experiment number  2
+Monti: There are 3 doors {'Z', 'Y', 'X'} One of Them hsa a car behind it. but which one?
+Sterling: I choose door  {'X'}
+Monti: Well well, I'll open the door {'Z'} and lucky you, this is empty.
+Monti: So I ask you now. will you change your answer?
+Sterling: I'm gonna do what's called a pro gamer move and choose door  {'Y'}
+CONGRATULATION!! YOU WON A CAR
+=====================================================
+=====================================================
+Experiment number  3
+Monti: There are 3 doors {'Z', 'Y', 'X'} One of Them hsa a car behind it. but which one?
+Sterling: I choose door  {'X'}
+Monti: Well well, I'll open the door {'Y'} and lucky you, this is empty.
+Monti: So I ask you now. will you change your answer?
+Sterling: I'm gonna do what's called a pro gamer move and choose door  {'Z'}
+CONGRATULATION!! YOU WON A CAR
+=====================================================
+=====================================================
+Experiment number  4
+Monti: There are 3 doors {'Z', 'Y', 'X'} One of Them hsa a car behind it. but which one?
+Sterling: I choose door  {'X'}
+Monti: Well well, I'll open the door {'Z'} and lucky you, this is empty.
+Monti: So I ask you now. will you change your answer?
+Sterling: I'm gonna do what's called a pro gamer move and choose door  {'Y'}
+CONGRATULATION!! YOU WON A CAR
+=====================================================
+=====================================================
+Experiment number  5
+Monti: There are 3 doors {'Z', 'Y', 'X'} One of Them hsa a car behind it. but which one?
+Sterling: I choose door  {'Y'}
+Monti: Well well, I'll open the door {'Z'} and lucky you, this is empty.
+Monti: So I ask you now. will you change your answer?
+Sterling: I'm gonna do what's called a pro gamer move and choose door  {'X'}
+CONGRATULATION!! YOU WON A CAR
+=====================================================

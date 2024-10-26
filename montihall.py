@@ -1,43 +1,49 @@
-import numpy as np
 import random
 import matplotlib.pyplot as plt
+
+totalNumberOfExperment = 5
+sucessfullExperment = [0]*2
+xlabel= ["50 - 50", "33 - 66"]
+widthOfBar = 0.35
+
 
 def randomDoor(initialDoorSet):
     doorList = list(initialDoorSet)
     #print(type(doorList),doorList)
     random.shuffle(doorList)
-    RandDoor = doorList.pop(0)
+    RandDoor = set(doorList.pop(0))
     return RandDoor
 
 def openUnchosedDoorWithNocar(initialDoorSet,putCarIn,chooseDoor):
     doorset = initialDoorSet - (putCarIn | chooseDoor)
     doorList = list(doorset)
     random.shuffle(doorList)
-    RandDoor = doorList.pop(0)
+    RandDoor = set(doorList.pop(0))
     return RandDoor
 
 def chooseDoorAtRandomForSecondTime(initialDoorSet,openDoor):
     doorList = list (initialDoorSet - openDoor)
     random.shuffle(doorList)
-    randDoor = doorList.pop(0)
+    randDoor = set(doorList.pop(0))
     return randDoor
 
 def MontiHallExperiment66():
 
     initialDoorSet = {'X','Y','Z'}
-    print("there are 3 doors", initialDoorSet)
+    print("Monti: There are 3 doors", initialDoorSet,"One of Them hsa a car behind it. but which one?")
 
     putCarIn = randomDoor(initialDoorSet)
-    chooseDoor = randomDoor(initialDoorSet)
-    print("Out of them we choose door ", chooseDoor)
+    #print("car was in ",str(putCarIn))
 
-    openDoor = openUnchosedDoorWithNocar(initialDoorSe=initialDoorSet,putCarIn=set(putCarIn),chooseDoor=set(chooseDoor))
-    print("The host then opens the door " ,openDoor," which was empty.")
-    print("The host then offers us as choice to changes our initial answer\nWe decided to change our choice")
-    
+    chooseDoor = randomDoor(initialDoorSet)
+    print("Sterling: I choose door ", str(chooseDoor))
+
+    openDoor = openUnchosedDoorWithNocar(initialDoorSet=initialDoorSet,putCarIn=putCarIn,chooseDoor=chooseDoor)
+    print("Monti: Well well, I'll open the door" ,str(openDoor),"and lucky you, this is empty.")
+    print("Monti: So I ask you now. will you change your answer?")
+     
     chooseDoor = initialDoorSet - chooseDoor - openDoor
-    print("Now, we choose to open door ",openDoor)
-    # check if sets check if open door and choosen door are same
+    print("Sterling: I'm gonna do what's called a pro gamer move and choose door ",str(chooseDoor))
 
     if(putCarIn == chooseDoor ):
         print("CONGRATULATION!! YOU WON A CAR")
@@ -49,19 +55,20 @@ def MontiHallExperiment66():
 def MontiHallExperiment33():
 
     initialDoorSet = {'X','Y','Z'}
-    print("there are 3 doors", initialDoorSet)
+    print("Monti: There are 3 doors", initialDoorSet,"One of Them hsa a car behind it. but which one?")
 
     putCarIn = randomDoor(initialDoorSet)
-    chooseDoor = randomDoor(initialDoorSet)
-    print("Out of them we choose door ", chooseDoor)
+    #print("car was in ",str(putCarIn))
 
-    openDoor = openUnchosedDoorWithNocar(initialDoorSe=initialDoorSet,putCarIn=set(putCarIn),chooseDoor=set(chooseDoor))
-    print("The host then opens the door " ,openDoor," which was empty.")
-    print("The host then offers us as choice to changes our initial answer\nWe decided not to change our choice")
+    chooseDoor = randomDoor(initialDoorSet)
+    print("Sterling: I choose door ", str(chooseDoor))
+
+    openDoor = openUnchosedDoorWithNocar(initialDoorSet=initialDoorSet,putCarIn=putCarIn,chooseDoor=chooseDoor)
+    print("Monti: Well well, I'll open the door" ,str(openDoor),"and lucky you, this is empty.")
+    print("Monti: So I ask you now. will you change your answer?")
     
     chooseDoor = chooseDoorAtRandomForSecondTime(initialDoorSet=initialDoorSet,openDoor=set(openDoor))
-    print("Now, we choose to open door ",chooseDoor)
-    # check if sets check if open door and are same
+    print("Sterling: It's 50 - 50 so I choose ",str(chooseDoor))
 
     if(putCarIn == chooseDoor ):
         print("CONGRATULATION!! YOU WON A CAR")
@@ -70,12 +77,10 @@ def MontiHallExperiment33():
         print("sorry you didn't win")
         return False
 
-totalNumberOfExperment = 1000
-sucessfullExperment = [0]*2
-xlabel= ["Option A", "Option B"]
-
 #for option A to not to change options
-experimentNum = 0
+experimentNum=0
+print("Conducting ",totalNumberOfExperment," experiments for optioin A")
+
 while(experimentNum < totalNumberOfExperment):
 
     print("=====================================================")
@@ -91,6 +96,9 @@ while(experimentNum < totalNumberOfExperment):
 
 #for option B to choose to change options
 experimentNum = 0
+
+print("Conducting ",totalNumberOfExperment," experiments for optioin A")
+
 while(experimentNum < totalNumberOfExperment):
 
     print("=====================================================")
@@ -107,8 +115,9 @@ while(experimentNum < totalNumberOfExperment):
 # plot the data on to set
 
 plt.figure(figsize=(10,6))
-plt.bar(x=xlabel,y=sucessfullExperment,width= 20,lable = "successfull predictions")
-plt.title("Monti Hall problem",loc="center")
+plt.bar(x=xlabel,height=sucessfullExperment,width= widthOfBar,label = "successfull predictions",hatch = '.',fill = False)
+title = "Simulation of Monti Hall problem "+ str(totalNumberOfExperment) + " times"
+plt.title(title,loc="center")
 plt.xlabel("Methods used",loc="center")
 plt.ylabel("Number of successfull experiment")
 plt.legend()
