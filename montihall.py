@@ -16,6 +16,12 @@ def openUnchosedDoorWithNocar(initialDoorSet,putCarIn,chooseDoor):
     RandDoor = doorList.pop(0)
     return RandDoor
 
+def chooseDoorAtRandomForSecondTime(initialDoorSet,openDoor):
+    doorList = list (initialDoorSet - openDoor)
+    random.shuffle(doorList)
+    randDoor = doorList.pop(0)
+    return randDoor
+
 def MontiHallExperiment66():
 
     initialDoorSet = {'X','Y','Z'}
@@ -52,11 +58,10 @@ def MontiHallExperiment33():
     openDoor = openUnchosedDoorWithNocar(initialDoorSe=initialDoorSet,putCarIn=set(putCarIn),chooseDoor=set(chooseDoor))
     print("The host then opens the door " ,openDoor," which was empty.")
     print("The host then offers us as choice to changes our initial answer\nWe decided not to change our choice")
-
-    #chooseDoor = chooseDoorAtRandom(initialDoorSet,)
     
+    chooseDoor = chooseDoorAtRandomForSecondTime(initialDoorSet=initialDoorSet,openDoor=set(openDoor))
     print("Now, we choose to open door ",chooseDoor)
-    # check if sets check if open door and choosen door are same
+    # check if sets check if open door and are same
 
     if(putCarIn == chooseDoor ):
         print("CONGRATULATION!! YOU WON A CAR")
@@ -65,11 +70,9 @@ def MontiHallExperiment33():
         print("sorry you didn't win")
         return False
 
-
 totalNumberOfExperment = 1000
 sucessfullExperment = [0]*2
 xlabel= ["Success from option A", "Success from option B"]
-
 
 #for option A to not to change options
 experimentNum = 0
@@ -86,10 +89,8 @@ while(experimentNum < totalNumberOfExperment):
     experimentNum+=1
     print("=====================================================")
 
-
 #for option B to choose to change options
 experimentNum = 0
-
 while(experimentNum < totalNumberOfExperment):
 
     print("=====================================================")
@@ -103,5 +104,7 @@ while(experimentNum < totalNumberOfExperment):
     experimentNum+=1
     print("=====================================================")
 
-# now the experimanet iscomple
+# plot the data on to set
 
+plt.figure(figsize=(10,6))
+plt.bar(x=xlabel,y=sucessfullExperment,width= 20,lable = "successfull predictions")
