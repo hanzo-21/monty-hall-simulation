@@ -1,0 +1,5 @@
+
+make mintocarloexperiment33 so that second choice would be 50 50 
+i.e. to choose random from un sleeseced door regardless the choice form 1st 
+
+dwawgin stuff
